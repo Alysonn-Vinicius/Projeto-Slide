@@ -1,0 +1,81 @@
+
+@font-face {
+    font-family: 'jujutsu';
+    src: url('fonts/Jujutsu\ Kaisen.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+header{
+    margin: 0;
+    height: 100vh;
+    background-color: #001;
+    display: flex;
+    flex-direction: column;
+    font-family: 'jujutsu';
+}
+.header{
+    background-color: rgb(99, 2, 31);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0px 10px 10px #000;
+}
+.slider{
+    flex: 1; /*pegar o restante da tela*/
+    overflow: hidden; /*remover oq passa da tela, paa nao ter barra de rolagem*/
+}
+.sliders-controls{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+    cursor: pointer;
+}
+.slider-control{
+    width: 55px;
+    height: 55px;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+/* efeito ao passar mouse */
+.slider-control:hover{
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+.slider--width{
+    height: 100%;
+    display: flex;
+    transition: all ease 0.3s; /*da efeito de passar pro lado*/
+}
+.slide--item{
+    width: 100vw;
+    height: inherit;
+    background-position: center;
+    background-size: cover;
+}
+
